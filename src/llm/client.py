@@ -19,10 +19,10 @@ class LLMClient:
     def __init__(self, settings: Settings):
         self.settings = settings
         self.client = AsyncOpenAI(
-            api_key=settings.deepseek_api_key,
-            base_url=settings.deepseek_base_url,
+            api_key=settings.llm_api_key,
+            base_url=settings.llm_base_url,
         )
-        self.model = settings.deepseek_model
+        self.model = settings.llm_model
         self.temperature = settings.llm_temperature
         self.max_tokens = settings.llm_max_tokens
         self.timeout = settings.llm_request_timeout

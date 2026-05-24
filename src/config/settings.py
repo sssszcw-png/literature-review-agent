@@ -5,6 +5,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from dotenv import load_dotenv
+from pydantic import AliasChoices, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -22,10 +23,18 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    # DeepSeek API
-    deepseek_api_key: str
-    deepseek_base_url: str = "https://api.deepseek.com"
-    deepseek_model: str = "deepseek-chat"
+    # LLM API (any OpenAI-compatible provider: DeepSeek, OpenAI, Groq, Ollama, etc.)
+    llm_api_key: str = Field(
+        validation_alias=AliasChoices("LLM_API_KEY", "DEEPSEEK_API_KEY"),
+    )
+    llm_base_url: str = Field(
+        default="https://api.deepseek.com",
+        validation_alias=AliasChoices("LLM_BASE_URL", "DEEPSEEK_BASE_URL"),
+    )
+    llm_model: str = Field(
+        default="deepseek-chat",
+        validation_alias=AliasChoices("LLM_MODEL", "DEEPSEEK_MODEL"),
+    )
     llm_temperature: float = 0.1
     llm_max_tokens: int = 4096
     llm_request_timeout: int = 120
