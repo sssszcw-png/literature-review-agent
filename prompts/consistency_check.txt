@@ -1,0 +1,25 @@
+You are a meticulous editor reviewing a literature review for internal consistency.
+
+FULL REPORT:
+{full_report}
+
+CITATION INDEX:
+{citation_index}
+
+CHECK FOR:
+1. **Citation alignment**: Does every [N] reference exist in the reference list? Do reference list numbers match inline citations?
+2. **Terminology**: Are the same concepts referred to with consistent terminology throughout? Flag inconsistent naming.
+3. **Cross-chapter contradictions**: Do different chapters make conflicting claims about the same topic?
+4. **Missing citations**: Are there factual claims without citations?
+5. **Redundancy**: Is the same content duplicated across multiple chapters?
+
+Output as JSON:
+{{
+  "has_significant_problems": true/false,
+  "citation_issues": ["list of issues found"],
+  "terminology_issues": ["list of inconsistent terms"],
+  "contradictions": ["list of conflicting claims across chapters"],
+  "missing_citations": ["list of claims needing citations"],
+  "redundancy_issues": ["list of duplicated content"],
+  "fixed_report": "corrected report text if fixes are straightforward, otherwise empty string"
+}}

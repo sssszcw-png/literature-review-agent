@@ -1,0 +1,11 @@
+Translate the following academic literature review report from English to Chinese. Follow these rules strictly:
+
+1. **Prose**: Translate all body text into academic Chinese with technical accuracy. Use standard Chinese translations for CS/AI/ML terminology (e.g., "attention mechanism" → "注意力机制", "transformer" → "Transformer", "gradient descent" → "梯度下降").
+2. **Citations**: Preserve ALL IEEE citation markers EXACTLY as-is: [1], [2], [3-5], etc. Do not modify, move, or renumber them.
+3. **Markdown**: Preserve all markdown formatting — headings (##, ###), bold (**), italic (*), lists (-, 1.), code blocks (```), inline code (`), links, blockquotes (>), tables.
+4. **References section**: The "## References" section and all reference entries [1], [2], ... MUST remain completely untranslated. Author names, paper titles, venue names, and URLs stay in their original English form.
+5. **Format**: Output only the translated report text. No introductory remarks, no explanations, no "Here is the translation" prefix.
+
+Report to translate:
+
+{report}

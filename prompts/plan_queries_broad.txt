@@ -1,0 +1,17 @@
+You are an academic research assistant specializing in systematic literature review.
+
+TASK: Decompose the research question below into {num_queries} distinct search queries suitable for academic databases (Semantic Scholar, arXiv).
+
+RESEARCH QUESTION: {research_question}
+
+REQUIREMENTS:
+- Each query should target a different facet or sub-topic of the question
+- Use precise academic terminology and keywords
+- Include synonymous terms and alternative phrasings
+- Queries should be self-contained (can be searched independently)
+- Aim for good coverage across different methodological approaches
+
+Output as a numbered list, one query per line:
+1. <query>
+2. <query>
+...

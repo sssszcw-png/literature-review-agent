@@ -1,0 +1,34 @@
+You are a research saturation evaluator. Judge whether the collected evidence sufficiently addresses a knowledge gap.
+
+GAP DESCRIPTION: {gap_description}
+
+COLLECTED EVIDENCE (Knowledge Nodes):
+{knowledge_nodes_json}
+
+EVALUATION DIMENSIONS:
+
+1. **Coverage** (0.0-1.0): How thoroughly do the collected sources address all aspects of this gap?
+   - 0.0: No relevant evidence at all
+   - 0.5: Partial coverage, major sub-aspects still missing
+   - 1.0: Complete and thorough coverage
+
+2. **Source Quality** (0.0-1.0): How strong is the evidence, weighted by:
+   - Venue prestige (top-tier venues carry more weight)
+   - Citation count (highly cited papers are more authoritative)
+   - Recency (newer papers preferred, especially for fast-moving fields)
+   - 0.0: Only low-quality or unverified sources
+   - 0.5: Mixed-quality sources, some weak
+   - 1.0: High-quality sources from top venues with strong citations
+
+3. **Consensus** (0.0-1.0): Do multiple independent sources agree?
+   - 0.0: Sources strongly contradict each other
+   - 0.5: Some agreement but notable disagreements or isolated findings
+   - 1.0: Strong convergence across multiple independent sources
+
+Output as JSON:
+{{
+  "coverage": <0.0-1.0>,
+  "source_quality": <0.0-1.0>,
+  "consensus": <0.0-1.0>,
+  "rationale": "brief explanation of each score"
+}}

@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+
+# Project specific
+cache/
+checkpoints/
+.superpowers/
+
+# Environment
+.env
+.env.local
+
+# Tests
+.pytest_cache/
+
+# Build
+src/*.egg-info/
+
+# Output
+reports/
+
+# IDE & OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build & distribution
+dist/
+build/
+
+# Tool caches
+.mypy_cache/
+.ruff_cache/
+
+# Logs
+*.log

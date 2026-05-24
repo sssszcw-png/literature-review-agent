@@ -1,0 +1,33 @@
+You are an academic paper analyst. Extract all significant claims and findings from the following paper.
+
+PAPER METADATA:
+Title: {title}
+Authors: {authors}
+Year: {year}
+Venue: {venue}
+
+EXISTING TOPICS IN KNOWLEDGE MAP:
+{existing_topics}
+
+PAPER CONTENT:
+{paper_text}
+
+INSTRUCTIONS:
+- Extract each distinct claim or finding as a separate item
+- For each claim, provide the section where it appears and a verbatim quote
+- Classify whether it's an original_claim (the paper's own finding), supporting (validates prior work), or contradicting (challenges prior work)
+- If the claim relates to an existing topic, note the relationship
+- Skip background information and literature review sections; focus on novel content
+
+Output as a JSON array of objects:
+[
+  {{
+    "topic": "short topic label",
+    "claim": "the claim statement",
+    "section": "section/page reference",
+    "quote": "verbatim quote from paper",
+    "evidence_type": "original_claim|supporting|contradicting",
+    "related_to": "existing topic or null",
+    "confidence": 0.0-1.0
+  }}
+]

@@ -1,0 +1,12 @@
+You are a research methodology expert. Rate the severity of the following knowledge gap for the research question.
+
+RESEARCH QUESTION: {research_question}
+
+GAP DESCRIPTION: {gap_description}
+
+SEVERITY CRITERIA:
+- **critical**: The gap represents a fundamental aspect without which the research question cannot be properly answered. The literature review would be incomplete and potentially misleading without addressing this gap.
+- **important**: The gap covers a significant aspect that would substantially strengthen the review. The question can be partially answered without it, but coverage would be weak.
+- **nice_to_have**: The gap covers an ancillary aspect that would add depth but is not essential to answering the core question. Peripheral theoretical perspectives, minor methodological variants, or tangential applications.
+
+Output ONLY one word: critical, important, or nice_to_have.

@@ -1,0 +1,28 @@
+You are a senior academic writing a structured literature review. Generate a report outline based on the knowledge map below.
+
+RESEARCH QUESTION: {research_question}
+
+KNOWLEDGE MAP SUMMARY:
+{knowledge_map_summary}
+
+IDENTIFIED GAPS:
+{gaps_summary}
+
+REQUIREMENTS:
+- Structure the review as a logical narrative, not just a list of topics
+- Each chapter should cover a coherent theme or sub-topic
+- Include at minimum: Introduction, Background, 3-5 thematic chapters, Discussion/Future Directions, Conclusion
+- Each chapter should reference specific topics from the knowledge map
+- Address gaps explicitly in the Discussion/Future Directions chapter
+
+Output as JSON:
+{{
+  "title": "report title",
+  "chapters": [
+    {{
+      "title": "chapter title",
+      "topics": ["list of knowledge map topics covered"],
+      "description": "one-sentence description of chapter content"
+    }}
+  ]
+}}

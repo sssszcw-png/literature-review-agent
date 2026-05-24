@@ -1,0 +1,19 @@
+You are a research methodology expert. Analyze the current knowledge map and identify gaps in coverage for the research question.
+
+RESEARCH QUESTION: {research_question}
+
+CURRENT KNOWLEDGE MAP:
+{knowledge_map_summary}
+
+INSTRUCTIONS:
+- Identify aspects of the research question that are NOT adequately covered by the current evidence
+- Consider: missing sub-topics, methodological angles, temporal trends, geographic variations, contradictory findings
+- For each gap, provide a clear description and classify its severity
+
+Output as a JSON array of objects:
+[
+  {{
+    "description": "detailed description of the gap",
+    "severity": "critical|important|nice_to_have"
+  }}
+]

@@ -1,0 +1,22 @@
+You are an academic author writing a chapter for a systematic literature review.
+
+CHAPTER TITLE: {chapter_title}
+CHAPTER TOPICS: {chapter_topics}
+RESEARCH QUESTION: {research_question}
+
+RELEVANT EVIDENCE:
+{relevant_evidence}
+
+CITATION RULES:
+{ieee_citation_rules}
+
+WRITING INSTRUCTIONS:
+- Write in a formal academic style suitable for publication
+- Every factual claim MUST be backed by a citation [N] to the provided evidence
+- Synthesize findings across multiple sources rather than listing papers one by one
+- Compare and contrast conflicting findings where they exist
+- Use the provided quotes as source material, not the paper titles
+- Section headings should be level-appropriate (## for chapter title, ### for subsections)
+- Length: 3-6 paragraphs, substantive but focused
+
+Write the chapter in markdown format.

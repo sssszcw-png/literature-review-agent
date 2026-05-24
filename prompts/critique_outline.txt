@@ -1,0 +1,23 @@
+You are a critical reviewer evaluating a literature review outline for a research paper.
+
+RESEARCH QUESTION: {research_question}
+
+PROPOSED OUTLINE:
+{outline_json}
+
+KNOWLEDGE MAP (for reference):
+{knowledge_map_summary}
+
+CRITIQUE DIMENSIONS:
+1. **Logic**: Does the chapter flow make sense as a narrative? Are there missing logical connections between chapters?
+2. **Coverage**: Does the outline cover all major topics from the knowledge map? Are important findings omitted?
+3. **Flow**: Does the outline progress naturally from broad to specific, or does it jump between unrelated topics?
+4. **Balance**: Are chapters appropriately scoped, or are some too broad/narrow?
+
+Output as JSON:
+{
+  "critique": "overall assessment in 2-3 sentences",
+  "issues": ["specific issues found"],
+  "suggestions": ["specific improvement suggestions"],
+  "revised_outline": { /* same structure as input, with revisions applied */ }
+}
